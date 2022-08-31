@@ -28,7 +28,7 @@ spring.datasource.password=qacinema' > ./src/main/resources/application.properti
 			'''
 			}
 		}
-			stage('Moving War'){
+		stage('Moving War'){
 			steps{
 			sh '''ssh -i "~/.ssh/jenkins_key" jenkins@18.170.36.93	 << EOF
 			cd qacinema
