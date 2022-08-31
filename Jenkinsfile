@@ -14,7 +14,7 @@ pipeline {
 		}
 		stage('SSH Build Deploy'){
 			steps{
-			sh '''ssh -i "~/.ssh/id_rsa" jenkins@13.40.128.40 << EOF
+			sh '''ssh -i "~/.ssh/authorized_keys" jenkins@13.40.128.40 << EOF
 			rm -rf qacinema
 			git clone https://github.com/itisianpetts/qacinema.git
 			cd qacinema
