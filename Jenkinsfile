@@ -28,10 +28,10 @@ spring.datasource.password=qacinema' > ./src/main/resources/application.properti
 			'''
 			}
 		}
-		stage('Moving War'){
+			stage('Moving War'){
 			steps{
-			sh '''ssh -i "~/.ssh/jenkins_key" jenkins@<***app_instance_ip***>	 << EOF
-			cd <***your_repository_name***>
+			sh '''ssh -i "~/.ssh/jenkins_key" jenkins@18.170.36.93	 << EOF
+			cd qacinema
 			mkdir -p /home/jenkins/Wars
 			mv ./target/*.war /home/jenkins/Wars/project_war.war
 			'''
@@ -39,21 +39,21 @@ spring.datasource.password=qacinema' > ./src/main/resources/application.properti
                 }
 		stage('Stopping Service'){
 			steps{
-			sh '''ssh -i "~/.ssh/jenkins_key" jenkins@<***app_instance_ip***> << EOF
-			cd <***your_repository_name***>
+			sh '''ssh -i "~/.ssh/jenkins_key" jenkins@18.170.36.93 << EOF
+			cd qacinema
 			bash stopservice.sh
 			'''
 			}
 		}
 		stage('Create new service file'){
 			steps{
-			sh '''ssh -i "~/.ssh/jenkins_key" jenkins@<***app_instance_ip***> << EOF
+			sh '''ssh -i "~/.ssh/jenkins_key" jenkins@18.170.36.93 << EOF
 			mkdir -p /home/jenkins/appservice
 			echo '#!/bin/bash
 sudo java -jar /home/jenkins/Wars/project_war.war' > /home/jenkins/appservice/start.sh
 sudo chmod +x /home/jenkins/appservice/start.sh
 echo '[Unit]
-Description=My SpringBoot App
+Description=QACinema
 [Service]
 User=ubuntu
 Type=simple
@@ -66,7 +66,7 @@ sudo mv /home/jenkins/myApp.service /etc/systemd/system/myApp.service
 		}
 		stage('Reload and restart service'){
 			steps{
-			sh '''ssh -i "~/.ssh/jenkins_key" jenkins@<***app_instance_ip***> << EOF
+			sh '''ssh -i "~/.ssh/jenkins_key" jenkins@18.170.36.93 << EOF
 			sudo systemctl daemon-reload
 			sudo systemctl restart myApp
 			'''
