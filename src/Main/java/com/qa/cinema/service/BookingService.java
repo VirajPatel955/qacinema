@@ -3,6 +3,7 @@ package com.qa.cinema.service;
 import java.util.List;
 import java.util.Optional;
 
+import org.modelmapper.ModelMapper;
 import com.qa.cinema.domain.Booking;
 import com.qa.cinema.repo.BookingRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,9 +15,12 @@ public class BookingService {
     @Autowired
     private BookingRepo repo;
 
+    private ModelMapper mapper;
+
     @Autowired
-    public BookingService(BookingRepo repo) {
+    public BookingService(BookingRepo repo, ModelMapper mapper) {
         this.repo = repo;
+        this.mapper = mapper;
     }
 
     public Booking addBooking(Booking booking) {
