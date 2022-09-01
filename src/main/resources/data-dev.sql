@@ -1,20 +1,13 @@
-INSERT INTO task_domain(TITLE, COMPLETED, DATE_TIME_SET)
-VALUES
-('Do laundry', FALSE, '2021-02-05 08:00'),
-('Make coffee', FALSE, '2021-01-21 13:00'),
-('Take out bins', TRUE, '2020-12-30 19:00'),
-('Buy masks', FALSE, '2021-02-01 03:30');
+drop table if exists booking
+create table booking (
+    id bigint not null auto_increment,
+    booker_name varchar(15) not null,
+    date date not null,
+    movie_title varchar(15) not null,
+    number_of_seats bigint not null,
+    ticket_type varchar(15) not null,
+    time datetime(6) not null,
+    total bigint not null,
+    primary key (id));
 
-INSERT INTO assignee_domain(NAME)
-VALUES
-('Jane'),
-('Bob'),
-('Paul'),
-('Sally');
-
-INSERT INTO tasks_assignees(TASK_ID, ASSIGNEE_ID)
-VALUES
-(1, 1),
-(2, 2),
-(2, 3),
-(3, 2);
+INSERT INTO qacinemaDB.booking (booker_name, date, movie_title, number_of_seats, ticket_type, time, total) values ("John Smith", 2020/05/03, "Ghostbusters", 2, "adult", '2020-05-03 11:11:11.11111', 20);
