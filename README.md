@@ -129,7 +129,7 @@ Input adminpassword from script output
 
 Install suggested plugins
 
-Create an account to log in to jenkins with
+Create an booking to log in to jenkins with
 
 --------------------------------------------------------------------------------
 
