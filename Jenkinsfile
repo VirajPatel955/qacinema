@@ -18,12 +18,20 @@ pipeline {
 			rm -rf qacinema
 			git clone https://github.com/itisianpetts/qacinema.git
 			cd qacinema
-			rm -f ./src/main/resources/application.properties
-			echo 'spring.jpa.hibernate.ddl-auto=create-drop
+			build_num=${BUILD_NUMBER}
+			echo '!#/bin/bash
+if ($build_num>2)
+echo "server.port=8080
 spring.datasource.url=jdbc:mysql://qacinema.cxwwrn7oq8ws.eu-west-2.rds.amazonaws.com:3306/qacinemaDB
-spring.datasource.data=classpath:data-dev.sql
+spring.datasource.password=qacinema
 spring.datasource.username=admin
-spring.datasource.password=qacinema' > ./src/main/resources/application.properties
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=update" > ./main/java/resources/application.properties
+fi' > if_holder.sh
+			chmod +x if_holder.sh
+			./if_holder.sh
 			mvn clean package
 			'''
 			}
