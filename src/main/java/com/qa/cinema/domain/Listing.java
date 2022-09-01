@@ -1,20 +1,18 @@
 package com.qa.cinema.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.Objects;
 
 @Entity
-public class Movie {
+public class Listing {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long movieID;
 
     @NotNull
+    @Column(name = "movie")
     private String movieTitle;
 
     @NotNull
@@ -26,7 +24,7 @@ public class Movie {
     @NotNull
     private Long showingTimes;
 
-    public Movie(Long movieID, String movieTitle, String director, String actors,  Long showingTimes) {
+    public Listing(Long movieID, String movieTitle, String director, String actors, Long showingTimes) {
         this.movieID = movieID;
         this.movieTitle = movieTitle;
         this.director = director;
@@ -34,14 +32,14 @@ public class Movie {
         this.showingTimes = showingTimes;
     }
 
-    public Movie(String movieTitle, String director, String actors,  Long showingTimes) {
+    public Listing(String movieTitle, String director, String actors, Long showingTimes) {
         this.movieTitle = movieTitle;
         this.director = director;
         this.actors = actors;
         this.showingTimes = showingTimes;
     }
 
-    public Movie() {
+    public Listing() {
     }
 
     public Long getMovieID() {
@@ -88,7 +86,7 @@ public class Movie {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Movie movie = (Movie) o;
+        Listing movie = (Listing) o;
         return Objects.equals(movieID, movie.movieID) && Objects.equals(movieTitle, movie.movieTitle) && Objects.equals(director, movie.director) && Objects.equals(actors, movie.actors) && Objects.equals(showingTimes, movie.showingTimes);
     }
 

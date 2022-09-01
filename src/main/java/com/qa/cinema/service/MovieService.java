@@ -1,8 +1,6 @@
 package com.qa.cinema.service;
 
-import com.qa.cinema.domain.Booking;
-import com.qa.cinema.domain.Movie;
-import com.qa.cinema.repo.BookingRepo;
+import com.qa.cinema.domain.Listing;
 import com.qa.cinema.repo.MovieRepo;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,11 +21,11 @@ public class MovieService {
         this.mapper = mapper;
     }
 
-    public Movie readMovie(Long id) {
+    public Listing readMovie(Long id) {
         return repo.findById(id).get();
     }
 
-    public List<Movie> readAllMovies() {
+    public List<Listing> readAllMovies() {
         return repo.findAll();
     }
 

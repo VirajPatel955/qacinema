@@ -1,7 +1,6 @@
 package com.qa.cinema.Controller;
 
-import com.qa.cinema.domain.Booking;
-import com.qa.cinema.domain.Movie;
+import com.qa.cinema.domain.Listing;
 import com.qa.cinema.service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -15,25 +14,25 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/Listing")
-public class MovieController {
+public class ListingController {
 
     @Autowired
     MovieService service;
 
     @Autowired
-    public MovieController(MovieService Service) {
+    public ListingController(MovieService Service) {
         this.service = Service;
     }
 
     @GetMapping("/getAllMovies")
-    public ResponseEntity<List<Movie>> getMovie() {
-        List<Movie> movieData = this.service.readAllMovies();
+    public ResponseEntity<List<Listing>> getMovie() {
+        List<Listing> movieData = this.service.readAllMovies();
 
-        return new ResponseEntity<List<Movie>>(movieData, HttpStatus.OK);
+        return new ResponseEntity<List<Listing>>(movieData, HttpStatus.OK);
     }
 
     @GetMapping("/getMovie/{id}")
-    public ResponseEntity<Movie> getMovieByID(@PathVariable Long id) {
+    public ResponseEntity<Listing> getMovieByID(@PathVariable Long id) {
         return ResponseEntity.ok(this.service.readMovie(id));
     }
 
