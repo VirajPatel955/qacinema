@@ -16,7 +16,6 @@ public class BookingService {
     private BookingRepo repo;
 
     private ModelMapper mapper;
-
     @Autowired
     public BookingService(BookingRepo repo, ModelMapper mapper) {
         this.repo = repo;
