@@ -20,10 +20,7 @@ public class Booking {
     private String movieTitle;
 
     @NotNull
-    private Date date;
-
-    @NotNull
-    private Timestamp time;
+    private Date movieDate;
 
     @NotNull
     @Column (length = 15)
@@ -43,21 +40,19 @@ public class Booking {
     public Booking() {
     }
 
-    public Booking(String movieTitle, Date date, Timestamp time, String bookerName, Long numberOfSeats, String ticketType, Long total) {
+    public Booking(String movieTitle, Date date, String bookerName, Long numberOfSeats, String ticketType, Long total) {
         this.movieTitle = movieTitle;
-        this.date = date;
-        this.time = time;
+        this.movieDate = date;
         this.bookerName = bookerName;
         this.numberOfSeats = numberOfSeats;
         this.ticketType = ticketType;
         this.total = total;
     }
 
-    public Booking(Long id, String movieTitle, Date date, Timestamp time, String bookerName, Long numberOfSeats, String ticketType, Long total) {
+    public Booking(Long id, String movieTitle, Date date, String bookerName, Long numberOfSeats, String ticketType, Long total) {
         this.id = id;
         this.movieTitle = movieTitle;
-        this.date = date;
-        this.time = time;
+        this.movieDate = date;
         this.bookerName = bookerName;
         this.numberOfSeats = numberOfSeats;
         this.ticketType = ticketType;
@@ -80,20 +75,12 @@ public class Booking {
         this.movieTitle = movieTitle;
     }
 
-    public Date getDate() {
-        return date;
+    public Date getMovieDate() {
+        return movieDate;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
-    }
-
-    public Timestamp getTime() {
-        return time;
-    }
-
-    public void setTime(Timestamp time) {
-        this.time = time;
+    public void setMovieDate(Date movieDate) {
+        this.movieDate = movieDate;
     }
 
     public String getBookerName() {
@@ -128,18 +115,17 @@ public class Booking {
         this.total = total;
     }
 
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Booking booking = (Booking) o;
-        return Objects.equals(id, booking.id) && Objects.equals(movieTitle, booking.movieTitle) && Objects.equals(date, booking.date) && Objects.equals(time, booking.time) && Objects.equals(bookerName, booking.bookerName) && Objects.equals(numberOfSeats, booking.numberOfSeats) && Objects.equals(ticketType, booking.ticketType) && Objects.equals(total, booking.total);
+        return Objects.equals(id, booking.id) && Objects.equals(movieTitle, booking.movieTitle) && Objects.equals(movieDate, booking.movieDate) && Objects.equals(bookerName, booking.bookerName) && Objects.equals(numberOfSeats, booking.numberOfSeats) && Objects.equals(ticketType, booking.ticketType) && Objects.equals(total, booking.total);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, movieTitle, date, time, bookerName, numberOfSeats, ticketType, total);
+        return Objects.hash(id, movieTitle, movieDate, bookerName, numberOfSeats, ticketType, total);
     }
 
     @Override
@@ -147,8 +133,7 @@ public class Booking {
         return "Booking{" +
                 "id=" + id +
                 ", movieTitle='" + movieTitle + '\'' +
-                ", date=" + date +
-                ", time=" + time +
+                ", movieDate=" + movieDate +
                 ", bookerName='" + bookerName + '\'' +
                 ", numberOfSeats=" + numberOfSeats +
                 ", ticketType='" + ticketType + '\'' +
