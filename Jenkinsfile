@@ -17,6 +17,8 @@ pipeline {
 			sh '''ssh -i "~/.ssh/jenkins_key" jenkins@18.170.36.93 << EOF
 			rm -rf qacinema
 			git clone https://github.com/itisianpetts/qacinema.git
+			git checkout -b dev
+			git pull dev
 			cd qacinema
 			rm -f ./src/main/resources/application.properties
 			echo 'spring.jpa.hibernate.ddl-auto=create-drop
