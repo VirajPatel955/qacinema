@@ -7,7 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 class CinemaApplicationTests {
 
 	@Test
-	void test() {
+	void contextLoads() {
 	}
 
 }
