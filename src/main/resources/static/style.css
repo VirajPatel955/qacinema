@@ -1,0 +1,22 @@
+.navbar-logo{
+    height: 50px;
+}
+
+.container-header{
+    width: 100%;
+    height: 76px;
+    position: absolute;
+    background-color: #0b090a;
+}
+
+body{
+    background-color: #161A1D;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 76px;
+    background-color: #0b090a;
+}
