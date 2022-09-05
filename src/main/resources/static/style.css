@@ -8,6 +8,7 @@ body,
 
 body {
   background-color: #161a1d;
+  height: 100vh;
 }
 
 .navbar-logo {
@@ -45,8 +46,21 @@ body {
   color: #fff;
 }
 
+.blog-btn {
+  background-color: #a4161a;
+  outline: none;
+  color: #fff;
+}
+
+.blog-btn:hover {
+  background-color: #af3034;
+  color: #fff;
+}
+
 footer {
-  position: fixed;
+  position: relative;
+  display: flex;
+  align-items: center;
   bottom: 0;
   left: 0;
   width: 100%;
