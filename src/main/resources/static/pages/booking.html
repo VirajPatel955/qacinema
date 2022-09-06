@@ -58,10 +58,10 @@
 
 <main>
   <div class="container">
-    <h2>Booking</h2>
+    <h2 id="output">Booking</h2>
     <section class="booking-form">
       <div class="form">
-      <div class="form-floating mb-3">
+      <form class="form-floating mb-3" name="bookedMovie">
       <select class="form-select" aria-label="Default select example" id="bookedMovie">
         <option selected>Select a movie</option> <!-- let this option chnage according to how this page is reached-->
         <option value="beast">Beast</option>
@@ -71,27 +71,36 @@
         <option value="interstellar">Interstellar</option>
         <option value="Ghostbusters">Ghostbutsers</option>
       </select>
-    </div>
+    </form>
 
-      <div class="form-floating mb-3">
+      <form class="form-floating mb-3" name="date">
+        <select class="form-select" aria-label="Default select example" id="dates">
+          <option selected>Date</option>
+          <option value="2022-09-03">Friday (03/09/2022)</option>
+          <option value="2022-09-04">Saturday (04/09/2022)</option>
+          <option value="2022-09-05">Sunday (05/09/2022)</option>
+        </select>
+      </form>
+
+      <form class="form-floating mb-3" name="tickerNumber">
         <input type="number" class="form-control" id="numberOfTickets" placeholder=2>
         <label for="numberOfTickets">Number of Tickets</label>
-      </div>
+      </form>
 
-      <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="name" placeholder="Name plz">
+      <form class="form-floating mb-3" name="bookerName">
+        <input type="text" class="form-control" id="name" placeholder="Name">
         <label for="name">Name</label>
-      </div>
+      </form>
 
-      <div class="form-floating mb-3" >
+      <form class="form-floating mb-3" name="ticketType" >
         <select class="form-select" aria-label="Default select example" id="ticketType">
           <option selected>Ticket Type</option>
           <option value="Adult">Adult</option>
           <option value="Child">Child</option>
         </select>
-      </div>
+      </form>
       <div class="d-grid gap-2">
-        <button class="btn booking-button" type="button">Submit</button>
+        <button class="btn booking-button" type="button" onclick="submitForm()">Submit</button>
       </div>
     </div>
       <div>
@@ -112,6 +121,7 @@
   </div>
 </footer>
 
+<script src="../app.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
