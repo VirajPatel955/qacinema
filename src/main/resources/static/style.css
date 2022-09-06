@@ -67,3 +67,42 @@ footer {
   height: 76px;
   background-color: #0b090a;
 }
+
+h2{
+  color: #fff;
+  padding-bottom: 25px;
+  padding-top: 25px;
+}
+
+.seatSelection{
+  width: 250px;
+  height: auto;
+}
+
+.form{
+  width: 64%;
+}
+
+.booking-form{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  margin-bottom: 25px;
+
+}
+
+.booking-button {
+  background-color: #a4161a;
+  color: white;
+}
+
+.booking-button:hover {
+  background-color: #af3034;
+  color: #fff;
+}
+
+.cinemaInside{
+  width:100%;
+  height:400px;
+  background-size: contain;
+}
