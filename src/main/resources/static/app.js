@@ -8,10 +8,13 @@ let booking;
 let listings;
 
 function calculateTotal(ticketType, quant) {
-    if(ticketType.includes("adult")) {
+    if(ticketType === "Adult") {
         return 10*quant;
     }
-    return 5*quant;
+    else if(ticketType === "Child" ||ticketType === "Senior") {
+        return 5*quant;
+    }
+    return 8*quant;
 }
 
 function submitForm() {
@@ -25,10 +28,9 @@ function submitForm() {
         "total": calculateTotal(ticketType.value, numberOfTickets.value)
     };
 
-    alert(JSON.stringify(booking));
 
     fetch('http://localhost:8080/Booking/createBooking', {
-    //fetch('http://18.170.36.93:8080/Booking/createBooking', {
+        //fetch('http://18.170.36.93:8080/Booking/createBooking', {
         method: 'POST',
         headers: {
             'accept': 'application/json, text/plane, */*',
@@ -37,10 +39,26 @@ function submitForm() {
         body: JSON.stringify(booking)
     })
         .then((res) => res.json())
-        .then(data => document.getElementById('output').innerText = JSON.stringify(data))
+        .then(data => alert("SUCCESS! \n your ticket has been booked. check your email for your ticket" + JSON.stringify(data)))
 }
 
-function getListings() {
+function movieChoice(chosenMovie) {
+    if(chosenMovie === "") {
+
+    }
+    else if (chosenMovie ==="") {
+
+    }
+
+    else{
+
+    }
+
+}
+
+
+
+/*function getListings() {
     //listings =
 
     fetch('http://18.170.36.93:8080/Listing/getAllMovies')
@@ -50,5 +68,5 @@ function getListings() {
             //data.forEach might be useful in this case
         })
 }
-
+*/
 
