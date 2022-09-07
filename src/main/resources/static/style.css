@@ -125,8 +125,10 @@ h2 {
   padding-top: 25px;
 }
 
-.seatSelection {
-  width: 250px;
+
+.seatSelection{
+  width: 360px;
+
   height: auto;
 }
 
