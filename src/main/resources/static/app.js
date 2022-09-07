@@ -30,7 +30,7 @@ function submitForm() {
     };
 
 
-    //fetch('http://localhost:8080/Booking/createBooking', {
+//     fetch('http://localhost:8080/Booking/createBooking', {
     fetch('http://18.170.36.93:8080/Booking/createBooking', {
         method: 'POST',
         headers: {
