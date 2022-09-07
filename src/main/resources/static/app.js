@@ -20,7 +20,6 @@ function calculateTotal(ticketType, quant) {
 
 function submitForm() {
     booking = {
-        "id": 1,
         "movieTitle": movieTitle.value,
         "movieDate": movieDate.value,
         "bookerName": bookerName.value,
