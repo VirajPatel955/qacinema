@@ -30,8 +30,8 @@ function submitForm() {
     };
 
 
-     fetch('http://localhost:8080/Booking/createBooking', {
-//    fetch('http://18.170.36.93:8080/Booking/createBooking', {
+//      fetch('http://localhost:8080/Booking/createBooking', {
+   fetch('http://18.170.36.93:8080/Booking/createBooking', {
         method: 'POST',
         headers: {
             'accept': 'application/json, text/plane, */*',
@@ -47,12 +47,13 @@ function submitForm() {
 
 function deleteBooking() {
     let book;
-    //fetch('http://18.170.36.93:8080/Booking/getBooking')
-    fetch('http://localhost:8080/Booking/getBooking')
+    fetch('http://18.170.36.93:8080/Booking/getBooking')
+//     fetch('http://localhost:8080/Booking/getBooking')
         .then((res) => res.json())
         .then((data) => {
             console.log(data.length);
-            fetch(`http://localhost:8080/Booking/deleteBooking/${data.length}`, { method: 'DELETE' })
+        fetch('http://18.170.36.93:8080'/Booking/deleteBooking/${data.length}`, { method: 'DELETE' })
+//             fetch(`http://localhost:8080/Booking/deleteBooking/${data.length}`, { method: 'DELETE' })
                 .then(() => console.log("deleted"));
         })
 }
