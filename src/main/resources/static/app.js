@@ -52,7 +52,7 @@ function deleteBooking() {
         .then((res) => res.json())
         .then((data) => {
             console.log(data.length);
-        fetch('http://18.170.36.93:8080'/Booking/deleteBooking/${data.length}`, { method: 'DELETE' })
+        fetch(`http://18.170.36.93:8080/Booking/deleteBooking/${data.length}`, { method: 'DELETE' })
 //             fetch(`http://localhost:8080/Booking/deleteBooking/${data.length}`, { method: 'DELETE' })
                 .then(() => console.log("deleted"));
         })
