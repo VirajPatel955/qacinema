@@ -58,65 +58,93 @@
     </div>
   </div>
 
-<main>
-  <div class="container">
-    <h2 id="output">Booking</h2>
-    <section class="booking-form">
-      <div class="form">
-      <form class="form-floating mb-3" name="bookedMovie">
-      <select class="form-select" aria-label="Default select example" id="bookedMovie">
-        <option selected>Select a movie</option> <!-- let this option chnage according to how this page is reached-->
-        <option value="Nope">Nope</option>
-        <option value="DC League of Superpets">Dc League of Superpets</option>
-        <option value="Gigi and Nate">Gigi and Nate</option>
-        <option value="Bullet Train">Bullet Train</option>
-        <option value="Fall">Fall</option>
-        <option value="Beast">Beast</option>
-      </select>
-    </form>
-
-      <form class="form-floating mb-3" name="date">
-        <select class="form-select" aria-label="Default select example" id="dates">
-          <option selected>Date</option>
-          <option value="2022-09-03">Friday (03/09/2022)</option>
-          <option value="2022-09-04">Saturday (04/09/2022)</option>
-          <option value="2022-09-05">Sunday (05/09/2022)</option>
+  <main>
+    <div class="container">
+      <h2 id="output">Booking</h2>
+      <section class="booking-form">
+        <div class="form">
+        <form class="form-floating mb-3" name="bookedMovie">
+        <select class="form-select" aria-label="Default select example" id="bookedMovie">
+          <option selected>Select a movie</option> <!-- let this option chnage according to how this page is reached-->
+          <option value="Nope">Nope</option>
+          <option value="DC League of Superpets">Dc League of Superpets</option>
+          <option value="Gigi and Nate">Gigi and Nate</option>
+          <option value="Bullet Train">Bullet Train</option>
+          <option value="Fall">Fall</option>
+          <option value="Beast">Beast</option>
         </select>
       </form>
 
-      <form class="form-floating mb-3" name="tickerNumber">
-        <input type="number" class="form-control" id="numberOfTickets" placeholder=2>
-        <label for="numberOfTickets">Number of Tickets</label>
-      </form>
+        <form class="form-floating mb-3" name="date">
+          <select class="form-select" aria-label="Default select example" id="dates">
+            <option selected>Date</option>
+            <option value="2022-09-03">Friday (03/09/2022)</option>
+            <option value="2022-09-04">Saturday (04/09/2022)</option>
+            <option value="2022-09-05">Sunday (05/09/2022)</option>
+          </select>
+        </form>
 
-      <form class="form-floating mb-3" name="bookerName">
-        <input type="text" class="form-control" id="name" placeholder="Name">
-        <label for="name">Name</label>
-      </form>
+        <form class="form-floating mb-3" name="tickerNumber">
+          <input type="number" class="form-control" id="numberOfTickets" placeholder=2>
+          <label for="numberOfTickets">Number of Tickets</label>
+        </form>
 
-      <form class="form-floating mb-3" name="ticketType" >
-        <select class="form-select" aria-label="Default select example" id="ticketType">
-          <option selected>Ticket Type</option>
-          <option value="Adult">Adult (£10.00)</option>
-          <option value="Child">Child (£5.00)</option>
-          <option value="Student">Students (£8.00)</option>
-          <option value="Senior">Senior (£5.00)</option>
-        </select>
-      </form>
-      <div class="d-grid gap-2">
-        <button class="btn booking-button" type="button" onclick="submitForm()">Submit</button>
+        <form class="form-floating mb-3" name="bookerName">
+          <input type="text" class="form-control" id="name" placeholder="Name">
+          <label for="name">Name</label>
+        </form>
+
+        <form class="form-floating mb-3" name="ticketType" >
+          <select class="form-select" aria-label="Default select example" id="ticketType">
+            <option selected>Ticket Type</option>
+            <option value="Adult">Adult (£10.00)</option>
+            <option value="Child">Child (£5.00)</option>
+            <option value="Student">Students (£8.00)</option>
+            <option value="Senior">Senior (£5.00)</option>
+          </select>
+        </form>
+        <div class="d-grid gap-2">
+          <button class="btn booking-button" type="button" onclick="submitForm()" data-bs-toggle="modal" data-bs-target="#exampleModal">Submit</button>
+        </div>
+        </div>
+        <div>
+          <img class="seatSelection" src="../images/seat-selection.png" alt="seat selction">
+        </div>
+      </section>
+    </div>
+    <div>
+      <img class="cinemaInside" src="../images/cinemaaInside.jpg">
+    </div>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="exampleModalLabel">Your movie has been booked!</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="deleteBooking()"></button>
+        </div>
+        <div class="modal-body">
+          <h5 id="bookRef"></h5>
+          <h5 id="movieTitle"></h5>
+          <h5 id="movieData"></h5>
+          <h5 id="bookedName"></h5>
+          <h5 id="ticketquant"></h5>
+          <h5 id="total"></h5>
+          <p>To complete payment, follow the PayPal link below</p>
+        <!--</div>
+        <div class="modal-footer">-->
+          <button type="button" class="btn">
+            <a href="https://www.paypal.com/signin">
+              <img src="../images/paypal.png" style="width: 100px; height: auto;">
+            </a>
+          </button>
+        </div>
       </div>
-      </div>
-      <div>
-        <img class="seatSelection" src="../images/seat-selection.png" alt="seat selction">
-      </div>
-    </section>
+    </div>
   </div>
 
-  <div>
-    <img class="cinemaInside" src="../images/cinemaaInside.jpg">
-  </div>
-</main>
 
 
   <footer>
