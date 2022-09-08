@@ -1,4 +1,3 @@
-
 movieTitle = document.getElementById("bookedMovie");
 movieDate = document.getElementById("dates")
 numberOfTickets = document.getElementById("numberOfTickets");
@@ -7,7 +6,6 @@ ticketType = document.getElementById("ticketType");
 let total;
 
 let booking;
-let listings;
 
 function calculateTotal(ticketType, quant) {
     if(ticketType === "Adult") {
@@ -64,64 +62,49 @@ function printBooking() {
     document.getElementById("ticketquant").innerHTML = ticketType.value + " x" + numberOfTickets.value;
     document.getElementById("bookedName").innerHTML = " Booked under name: " + bookerName.value;
     document.getElementById("total").innerHTML = "£" + total;
-    //document.getElementById("ticketCon").innerHTML = ticketType.value;
 
 }
-
 
 function movieChoice(chosenMovie) {
-    if(chosenMovie === "") {
-
+    if(chosenMovie === "Nope") {
+        document.getElementById("bookedMovie").innerHTML =
+            "<select class=\"form-select\" aria-label=\"Default select example\" id=\"bookedMovie\" disabled>\n" +
+            "          <option selected value=\"Nope\">Nope</option>\n" +
+            "        </select>";
     }
-    else if (chosenMovie ==="") {
-
+    else if (chosenMovie ==="Dc League of Superpets") {
+        document.getElementById("bookedMovie").innerHTML =
+            "<select class=\"form-select\" aria-label=\"Default select example\" id=\"bookedMovie\" disabled>\n" +
+            "          <option selected value=\"DC League of Superpets\">Dc League of Superpets</option>\n" +
+            "        </select>";
     }
 
-    else{
+    else if(chosenMovie === "Gigi and Nate") {
+        document.getElementById("bookedMovie").innerHTML =
+            "<select class=\"form-select\" aria-label=\"Default select example\" id=\"bookedMovie\" disabled>\n" +
+            "          <option selected value=\"Gigi and Nate\">Gigi and Nate</option>\n" +
+            "        </select>";
+    }
 
+    else if(chosenMovie === "Bullet Train") {
+        document.getElementById("bookedMovie").innerHTML =
+            "<select class=\"form-select\" aria-label=\"Default select example\" id=\"bookedMovie\" disabled>\n" +
+            "          <option selected value=\"Bullet Train\">Bullet Train</option>\n" +
+            "        </select>";
+    }
+
+    else if(chosenMovie === "Fall") {
+        document.getElementById("bookedMovie").innerHTML =
+            "<select class=\"form-select\" aria-label=\"Default select example\" id=\"bookedMovie\" disabled>\n" +
+            "          <option selected value=\"Fall\">Fall</option>\n" +
+            "        </select>";
+    }
+
+    else if(chosenMovie === "Beast") {
+        document.getElementById("bookedMovie").innerHTML =
+            "<select class=\"form-select\" aria-label=\"Default select example\" id=\"bookedMovie\" disabled>\n" +
+            "          <option selected value=\"Beast\">Beast</option>\n" +
+            "        </select>";
     }
 
 }
-
-/*function getListings() {
-    //listings =
-
-    fetch('http://18.170.36.93:8080/Listing/getAllMovies')
-        .then((res) => res.json())
-        .then((data) => {
-            //whatever with the data
-            //data.forEach might be useful in this case
-        })
-}
-*/
-
-
-
-
-
-
-
-// const listingURL = "http://http://18.170.36.93:8080/Listing"
-
-// const readListing = () => {
-//     fetch(`${listingURL}/getMovie`).then(function (response) {
-//         return response.json();
-//     })
-//     .then(function (data) {
-//         appendData(data);
-//     })
-//     .catch(function (err) {
-//         console.log('error: ' + err);
-//     });
-//         function appendData(toDoTitleObject) {
-//             var ToDoContainer = document.getElementById("ReadToDo");
-//             ToDoContainer.textContent = '';
-//             for (var i = 0; i < toDoTitleObject.length; i++) {
-//                 var div = document.createElement("div");
-//                 div.innerHTML = 'To Do Title: ' + toDoTitleObject[i].toDoTitle  + ' To Do Item: ' + toDoTitleObject[i].toDoItem + ' To Do Complete: ' + toDoTitleObject[i].toDoComplete;
-//                 ToDoContainer.appendChild(div);
-//                 }
-//                 };
-
-// }
-
