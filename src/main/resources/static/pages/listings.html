@@ -76,9 +76,15 @@
               class="rounded-2 float-end" alt="Gigi & Nate" data-bs-toggle="modal" data-bs-target="#GigiAndNate">
           </div>
           <div class="button-row-1">
-            <button class="listing-button" style="vertical-align:middle"><span>Book Now</span></button>
-            <button class="listing-button" style="vertical-align:middle"><span>Book Now</span></button>
-            <button class="listing-button" style="vertical-align:middle"><span>Book Now</span></button>
+            <a>
+              <button class="listing-button" style="vertical-align:middle" onclick=movieChoice("Nope")><span>Book Now</span></button>
+            </a>
+            <a href="booking.html">
+              <button class="listing-button" style="vertical-align:middle" onclick=movieChoice("DcLeagueoOfSuperpets")><span>Book Now</span></button>
+            </a>
+            <a href="booking.html">
+              <button class="listing-button" style="vertical-align:middle" onclick=movieChoice("GigiAndNate")><span>Book Now</span></button>
+            </a>
           </div>
           <div class="listing-row-2">
             <img src="../images/BulletTrainMP.jpg" style="width:350px;height:auto;margin: 20px 0 0 45px"
@@ -89,9 +95,15 @@
               class="rounded-2 float-end" alt="Beast" data-bs-toggle="modal" data-bs-target="#Beast">
           </div>
           <div class="button-row-1">
-            <button class="listing-button" style="vertical-align:middle"><span>Book Now</span></button>
-            <button class="listing-button" style="vertical-align:middle"><span>Book Now</span></button>
-            <button class="listing-button" style="vertical-align:middle"><span>Book Now</span></button>
+            <a href="booking.html">
+              <button class="listing-button" style="vertical-align:middle" onclick=movieChoice("BulletTrain")><span>Book Now</span></button>
+            </a>
+            <a href="booking.html">
+            <button class="listing-button" style="vertical-align:middle" onclick=movieChoice("Fall")><span>Book Now</span></button>
+            </a>
+            <a href="booking.html">
+            <button class="listing-button" style="vertical-align:middle" onclick=movieChoice("Beast")><span>Book Now</span></button>
+            </a>
           </div>
         </div>
       </div>
@@ -242,6 +254,7 @@
         <p>Copyright &copy; 2022 Codebusters</p>
       </div>
     </footer>
+    <script src="../app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
       crossorigin="anonymous"></script>

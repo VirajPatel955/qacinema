@@ -38,7 +38,6 @@ function submitForm() {
         body: JSON.stringify(booking)
     })
         .then((res) => res.json())
-        .then(data => alert("SUCCESS! \n your ticket has been booked. check your email for your ticket"))
 
     printBooking();
 }
@@ -66,27 +65,26 @@ function printBooking() {
 }
 
 function movieChoice(chosenMovie) {
+    console.log("hello" + chosenMovie);
     if(chosenMovie === "Nope") {
-        document.getElementById("bookedMovie").innerHTML =
-            "<select class=\"form-select\" aria-label=\"Default select example\" id=\"bookedMovie\" disabled>\n" +
-            "          <option selected value=\"Nope\">Nope</option>\n" +
-            "        </select>";
+        document.getElementById("bookedMovie").value = "Nope";
+
     }
-    else if (chosenMovie ==="Dc League of Superpets") {
+    else if (chosenMovie ==="DcLeagueoOfSuperpets") {
         document.getElementById("bookedMovie").innerHTML =
             "<select class=\"form-select\" aria-label=\"Default select example\" id=\"bookedMovie\" disabled>\n" +
             "          <option selected value=\"DC League of Superpets\">Dc League of Superpets</option>\n" +
             "        </select>";
     }
 
-    else if(chosenMovie === "Gigi and Nate") {
+    else if(chosenMovie === "GigiAndNate") {
         document.getElementById("bookedMovie").innerHTML =
             "<select class=\"form-select\" aria-label=\"Default select example\" id=\"bookedMovie\" disabled>\n" +
             "          <option selected value=\"Gigi and Nate\">Gigi and Nate</option>\n" +
             "        </select>";
     }
 
-    else if(chosenMovie === "Bullet Train") {
+    else if(chosenMovie === "BulletTrain") {
         document.getElementById("bookedMovie").innerHTML =
             "<select class=\"form-select\" aria-label=\"Default select example\" id=\"bookedMovie\" disabled>\n" +
             "          <option selected value=\"Bullet Train\">Bullet Train</option>\n" +
