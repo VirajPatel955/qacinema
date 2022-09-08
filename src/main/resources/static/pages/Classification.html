@@ -3,9 +3,10 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Forum</title>
+  <title>Cinema Classifications</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
   <link rel="stylesheet" href="http://18.170.36.93:8080/style.css">
 </head>
 
@@ -63,6 +64,7 @@
               <li class="nav-item">
                 <a class="nav-link text-light" href="./GettingThere.html">Getting There</a>
               </li>
+            </li>
             </ul>
             <form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search">
@@ -74,121 +76,98 @@
     </div>
   </div>
 
-  <main style="padding-top: 76px;">
-    <section>
+  <main>
+    <h1 style="color:white; text-align:center;">
+      Classification
+    </h1>
+    <div class="container classification"> 
 
-      <div class="top-bar">
-        <h1>
-          My Forum
-        </h1>
+    <section class="p-5" class="p-5 bg-dark">
+      <div class="row">
+
+
+
+      <div class="col">
+        <div class="card cardclass" style="width: 320px; height: 320px; ">
+            <img src="../images/U.png" alt="U" style="width: 250px; height: 250px;" class="center">
+            <div class="container">
+              <h4 class="text-center" style="color:black;"><b>U Classification</b></h4>
+              <p class="text-center" style="color:black;"> Suitable for all users</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+           <div class="card cardclass" style="width: 320px; height: 320px;">
+            <img src="../images/PG.png" alt="PG" style="width: 250px; height: 250px;" class="center">
+            <div class="container">
+              <h4 class="text-center" style="color:black;"><b>PG Classification</b></h4>
+              <p class="text-center" style="color:black;"> Parental Guidance</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+            <div class="card cardclass" style="width: 320px; height: 320px;">
+                <img src="../images/12A.png" alt="12A" style="width: 250px; height: 250px;" class="center">
+                <div class="container">
+                  <h4 class="text-center" style="color:black;"><b>12A Classification</b></h4>
+                  <p class="text-center" style="color:black;"> Cinema release suitable for 12 years+</p>
+                </div>
+            </div>
+         </div>
+        </div>
+
+         
+        </section>
+        <section class="p-5" class="p-5 bg-dark">
+            <div class="row">
+
+      <div class="col">
+          <div class="card cardclass" style="width: 320px; height: 320px;">
+            <img src="../images/12.png" alt="12" style="width: 250px; height: 250px;" class="center">
+            <div class="container">
+              <h4 class="text-center" style="color:black;"><b>12 Classification</b></h4>
+              <p class="text-center" style="color:black;"> Video release suitable for 12 years+ </p>
+            </div>
+          </div>
       </div>
-      <div class="main">
-        <ol>
-        </ol>
+
+      <div class="col">
+          <div class="card cardclass" style="width: 320px; height: 320px;">
+            <img src="../images/15.png" alt="15" style="width: 250px; height: 250px;" class="center">
+            <div class="container">
+              <h4 class="text-center" style="color:black;"><b>15 Classification</b></h4>
+              <p class="text-center" style="color:black;"> Suitable only for 15 years+ </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card cardclass" style="width: 320px; height: 320px;">
+            <img src="../images/18.png" alt="18" style="width: 250px; height: 250px;" class="center">
+            <div class="container">
+              <h4 class="text-center" style="color:black;"><b>18 Classification</b></h4>
+              <p class="text-center" style="color:black;"> Suitable only for adults</p>
+            </div>
+          </div>
+         </div>
+         </div>
+
+        </section>
       </div>
-      <script src="data.js"></script>
-      <script>
-        console.log(threads);
-        var container = document.querySelector('ol');
-        for (let thread of threads) {
-          var html = `
-            <li class="row">
-                <a href="/src/main/resources/static/DiscussionBoard.html?${thread.id}">
-                    <h4 class="title">
-                        ${thread.title}
-                    </h4>
-                    <div class="bottom">
-                        <p class="timestamp">
-                            ${new Date(thread.date).toLocaleString()}
-                        </p>
-                        <p class="comment-count">
-                            ${thread.comments.length} comments
-                        </p>
-                    </div>
-                </a>
-            </li>
-            `
-          container.insertAdjacentHTML('beforeend', html);
-        }
-      </script>
-      <style>
-        body {
-          margin: 10px 60px;
-        }
+<a href="http://www.screenonline.org.uk/film/id/592611/index.html"> <p style="text-align:center; font-size:20px;"> Click Here! <br> For more information about Cinema Classifications</p></a>
+        
 
-        a {
-          text-decoration: none;
-          color: #FFFFFF;
-        }
-
-        h1,
-        h4,
-        ol {
-          margin: 0;
-        }
-
-        p {
-          margin: 5px 0;
-        }
-
-        .top-bar {
-          background-color: #161A1D;
-          padding: 0 40px;
-        }
-
-        .main {
-          background-color: #A4161A;
-          padding: 10px 15px;
-        }
-
-        .row {
-          padding: 5px 0;
-        }
-
-        .bottom {
-          display: flex;
-          color: #FFFFFF;
-          font-size: 12px;
-        }
-
-        .timestamp {
-          padding-right: 10px;
-        }
-      </style>
-
-    </section>
   </main>
 
+
   <footer>
-    <div class="container text-light footer-container">
-      <div class="footer-left">
-        <div>Phone: 0800 123 4567</div>
-        <div>Email:
-          <a href="mailto:academy@qa.com">QACinema@movies.co.uk</a>
-        </div>
-      </div>
-      <div class="footer-center">
-        <a href="../index.html">
-          <img class="footer-image" src="../images/QACinemasLogoV2.png" alt="QACinemasLogo">
-        </a>
-      </div>
-      <div class="footer-right">
-        <div class="footer-right-sub">
-          <a class="footer-right-item" href="/pages/AboutUs.html">About Us</a>
-          <a class="footer-left-item"
-            href="http://18.170.36.93:8080/pages/AboutUs.html#:~:text=Favourite%20Movie%3A%20Hatching-,Contact%20Us,-Main%20Location%3A">Contact
-            Us</a>
-        </div>
-        <span class="subscript-text">Copyright &copy; 2022 Codebusters</span>
-      </div>
+    <div class="container text-light">
+      <p>Copyright &copy; 2022 Codebusters</p>
     </div>
   </footer>
-
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
     crossorigin="anonymous"></script>
-
 </body>
 
 </html>
