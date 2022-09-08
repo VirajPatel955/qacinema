@@ -41,9 +41,25 @@
                   <li><a class="dropdown-item" href="./comingsoon.html">Coming Soon</a></li>
                 </ul>
               </li>
-              <li class="nav-item">
-                <a class="nav-link text-light" href="./AboutUs.html">About Us</a>
-              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" href="#" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Information
+                </a>
+                <ul class="dropdown-menu">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="./pages/AboutUs.html">About Us</a>
+                    </li>
+                        <hr class="dropdown-divider">
+                      <li class="nav-item">
+                            <a class="nav-link text-dark" href="http://18.170.36.93:8080/pages/AboutUs.html#:~:text=Favourite%20Movie%3A%20Hatching-,Contact%20Us,-Main%20Location%3A">Contact Us</a>
+                     </li>
+                      <hr class="dropdown-divider">
+                      <li class="nav-item">
+                        <a class="nav-link text-dark" href="./Classification.html"> Cinema Classifications</a>
+                      </li>
+                </ul>
+            </li>
               <li class="nav-item">
                 <a class="nav-link text-light" href="./GettingThere.html">Getting There</a>
               </li>
@@ -231,8 +247,27 @@
     </div>
 
     <footer>
-      <div class="container text-light">
-        <p>Copyright &copy; 2022 Codebusters</p>
+      <div class="container text-light footer-container">
+        <div class="footer-left">
+          <div>Phone: 0800 123 4567</div>
+          <div>Email:
+            <a href="mailto:academy@qa.com">QACinema@movies.co.uk</a>
+          </div>
+        </div>
+        <div class="footer-center">
+          <a href="../index.html">
+            <img class="footer-image" src="../images/QACinemasLogoV2.png" alt="QACinemasLogo">
+          </a>
+        </div>
+        <div class="footer-right">
+          <div class="footer-right-sub">
+            <a class="footer-right-item" href="/pages/AboutUs.html">About Us</a>
+            <a class="footer-left-item"
+              href="http://18.170.36.93:8080/pages/AboutUs.html#:~:text=Favourite%20Movie%3A%20Hatching-,Contact%20Us,-Main%20Location%3A">Contact
+              Us</a>
+          </div>
+          <span class="subscript-text">Copyright &copy; 2022 Codebusters</span>
+        </div>
       </div>
     </footer>
 
