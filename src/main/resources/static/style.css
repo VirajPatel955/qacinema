@@ -339,8 +339,8 @@ h2 {
   cursor: pointer;
 }
 
-.card {
-  background-color: #161a1d;
+.card-2{
+  background-color: #161A1D;
   padding: 1vh 1vw;
   margin: 0 50px 0 50px;
   /* border: none; */
