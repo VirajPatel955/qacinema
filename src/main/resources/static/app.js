@@ -3,6 +3,7 @@ movieDate = document.getElementById("dates")
 numberOfTickets = document.getElementById("numberOfTickets");
 bookerName = document.getElementById("name");
 ticketType = document.getElementById("ticketType");
+
 let total;
 
 let booking;
@@ -65,9 +66,11 @@ function printBooking() {
 }
 
 function movieChoice(chosenMovie) {
-    console.log("hello" + chosenMovie);
     if(chosenMovie === "Nope") {
-        document.getElementById("bookedMovie").value = "Nope";
+        document.getElementById("bookedMovie").innerHTML =
+        "<select class=\"form-select\" aria-label=\"Default select example\" id=\"bookedMovie\" disabled>\n" +
+        "          <option selected value=\"Nope\">Nope</option>\n" +
+        "        </select>";
 
     }
     else if (chosenMovie ==="DcLeagueoOfSuperpets") {
