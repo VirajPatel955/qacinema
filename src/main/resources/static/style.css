@@ -19,10 +19,6 @@ body {
   text-align: center;
 }
 
-.navbar-logo {
-  height: 50px;
-}
-
 tbody {
   color: antiquewhite;
 }
@@ -241,17 +237,6 @@ footer {
   color: #fff;
 }
 
-footer {
-  position: relative;
-  display: flex;
-  align-items: center;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 76px;
-  background-color: #0b090a;
-}
-
 .listing-button {
   display: inline-flex;
   border-radius: 4px;
@@ -339,8 +324,8 @@ h2 {
   cursor: pointer;
 }
 
-.card-2{
-  background-color: #161A1D;
+.card-2 {
+  background-color: #161a1d;
   padding: 1vh 1vw;
   margin: 0 50px 0 50px;
   /* border: none; */
@@ -382,4 +367,49 @@ h2 {
     flex-direction: row;
     justify-content: space-around;
   }  */
-  
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-image {
+  height: 50px;
+}
+
+.footer-image:hover {
+  scale: 0.96;
+}
+
+.footer-right {
+  text-align: end;
+}
+
+.footer-right-sub {
+  display: flex;
+  font-size: 20px;
+}
+
+.footer-right-item {
+  padding-right: 20px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-left-item {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-right-item:hover {
+  color: #a4161a;
+}
+
+.footer-left-item:hover {
+  color: #a4161a;
+}
+
+.subscript-text {
+  font-size: 10px;
+}
