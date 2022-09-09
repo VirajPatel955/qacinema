@@ -18,7 +18,6 @@ pipeline {
 			rm -rf qacinema
 			git clone https://github.com/itisianpetts/qacinema.git
 			cd qacinema
-			git checkout dev
 			git pull
 			build_num=${BUILD_NUMBER}
 			echo '!#/bin/bash
