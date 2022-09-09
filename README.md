@@ -2,6 +2,11 @@
 
 The final project of Team Codebusters - 22JuneEnable2
 
+
+## Live Site
+You can visit the live app : http://18.170.36.93:8080
+
+
 ## Trello Board
 https://trello.com/b/nEJm8PhE/qa-cinema
 
@@ -27,6 +32,3 @@ Our client was the well-known cinema chain, "QA Cinemas". Our team was tasked wi
 - Back-End Programming - Spring Boot (Java)
 - Front-End Development Framework - HTML, CSS and JavaScript
 - Unit Testing - JUnit & Mockito
-
-## Live Site
-You can visit the live app : http://18.170.36.93:8080
