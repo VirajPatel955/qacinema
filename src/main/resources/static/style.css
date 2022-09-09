@@ -1,0 +1,415 @@
+html,
+body,
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #161a1d;
+  height: 100vh;
+}
+
+.navbar-logo {
+  height: 50px;
+}
+
+.main-listing {
+  text-align: center;
+}
+
+tbody {
+  color: antiquewhite;
+}
+
+p {
+  color: antiquewhite;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-box {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 3px solid #0b090a;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front,
+.flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-box-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-box-back {
+  background-color: #161a1d;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-box-2 {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 3px solid #0b090a;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner-2 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box-2:hover .flip-box-inner-2 {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front-2,
+.flip-box-back-2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-box-front-2 {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-box-back-2 {
+  background-color: #161a1d;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-box-3 {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 3px solid #0b090a;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner-3 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box-3:hover .flip-box-inner-3 {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front-3,
+.flip-box-back-3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-box-front-3 {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-box-back-3 {
+  background-color: #161a1d;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+footer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 76px;
+  background-color: #0b090a;
+}
+
+.places {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.main-listing {
+  text-align: center;
+}
+
+.container-header {
+  width: 100%;
+  height: 76px;
+  top: 0;
+  left: 0;
+  background-color: #0b090a;
+}
+
+.search-btn {
+  background-color: #a4161a;
+}
+
+.search-btn:hover {
+  background-color: #af3034;
+  color: #fff;
+}
+
+.showcase-text {
+  color: #a4161a;
+}
+
+.whats-on-btn {
+  background-color: #a4161a;
+  color: #fff;
+}
+
+.whats-on-btn:hover {
+  background-color: #af3034;
+  color: #fff;
+}
+
+.blog-btn {
+  background-color: #a4161a;
+  outline: none;
+  color: #fff;
+}
+
+.blog-btn:hover {
+  background-color: #af3034;
+  color: #fff;
+}
+
+.listing-button {
+  display: inline-flex;
+  border-radius: 4px;
+  background-color: #ba181b;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 28px;
+  padding: 15px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 10px 110px 25px 110px;
+}
+
+.listing-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.listing-button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.listing-button:hover span {
+  padding-right: 25px;
+}
+
+.listing-button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.modal-content {
+  background: #d3d3d3;
+}
+
+h2 {
+  color: #fff;
+  padding-bottom: 25px;
+  padding-top: 25px;
+}
+
+.seatSelection {
+  width: 360px;
+
+  height: auto;
+}
+
+.form {
+  width: 64%;
+}
+
+.booking-form {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.booking-button {
+  background-color: #a4161a;
+  color: white;
+}
+
+.booking-button:hover {
+  background-color: #af3034;
+  color: #fff;
+}
+
+.cinemaInside {
+  width: 100%;
+  height: 400px;
+  background-size: contain;
+}
+
+.rounded-2:hover {
+  cursor: pointer;
+}
+
+.card-2 {
+  background-color: #161a1d;
+  padding: 1vh 1vw;
+  margin: 0 50px 0 50px;
+  /* border: none; */
+}
+
+.items {
+  padding: 2vh;
+  margin: 0.5vh 2vw;
+  display: inline;
+}
+
+.pic {
+  float: left;
+}
+
+.pic-2 {
+  float: right;
+  margin: -318px 0 0 0;
+}
+
+.pic-3 {
+  float: right;
+  margin: -300px 0 0 0;
+}
+
+.cardclass {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px; /* 5px rounded corners */
+  }
+  
+  /* Add rounded corners to the top left and the top right corner of the image */
+  .U {
+    border-radius: 5px 5px 0 0;
+  }
+
+   /* .classification {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }  */
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-image {
+  height: 50px;
+}
+
+.footer-image:hover {
+  scale: 0.96;
+}
+
+.footer-right {
+  text-align: end;
+}
+
+.footer-right-sub {
+  display: flex;
+  font-size: 20px;
+}
+
+.footer-right-item {
+  padding-right: 20px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-left-item {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-right-item:hover {
+  color: #a4161a;
+}
+
+.footer-left-item:hover {
+  color: #a4161a;
+}
+
+.subscript-text {
+  font-size: 10px;
+}

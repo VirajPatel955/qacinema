@@ -1,7 +1,5 @@
 # QA CINEMA
 
-# PLEASE GO TO DEV BRANCH!!!!
-
 The final project of Team Codebusters - 22JuneEnable2
 
 
