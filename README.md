@@ -2,6 +2,9 @@
 
 The final project of Team Codebusters - 22JuneEnable2
 
+## Trello Board
+https://trello.com/b/nEJm8PhE/qa-cinema
+
 ## Team Codebusters
 - Feiza Ahmed - https://github.com/feiza15
 - Anthony Papasavva - https://github.com/AnthonyPapasavva
